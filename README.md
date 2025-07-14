@@ -96,7 +96,7 @@ If you use this automation in your workflow, I’d love to hear about it!
 ## 📧 Contact
 
 **Author:** Darshan Soni  
-📬 [LinkedIn](https://www.linkedin.com/) | 📧 [your-email@example.com]
+📬 [LinkedIn](https://www.linkedin.com/in/darshan-soni-328715273/) | 📧 [darshan06soni@gmail.com]
 
 ---
 
