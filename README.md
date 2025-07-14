@@ -1,61 +1,33 @@
-import pandas as pd
-import pyautogui as pg
-import time
+# 🧠 Tally Automation Using Python
 
-excel_path = r"C:\Users\Dell\.ipynb_checkpoints\Voucher Template.xls"
-df = pd.read_excel(excel_path, sheet_name="TEST")
-date = df["Date"].values
-account = df["Account"].values
-particular = df["Particular"].values
-amount = df["Amount"].values
-naration = df["Naration"].values
-zipped = zip(date, account, particular, amount, naration)  # Fix the variable assignment
-time.sleep(3)
+This project automates repetitive data entry tasks in **Tally ERP** using **Python**, significantly reducing manual effort and errors.
 
+It reads accounting data from an Excel sheet and simulates user input in Tally using GUI automation, with built-in error handling and dynamic ledger creation using **OpenCV image recognition**.
 
-# Start of the Loop:
-for (a, b, c, d, e) in zipped:  # Indent the loop block
-    pg.press("F2")
-   
-    
-    # Convert to Pandas Timestamp
-    date_obj = pd.Timestamp(a)
-    
-    # Format date as "1-4-2023"
-    formatted_date = date_obj.strftime("%#d-%#m-%Y")
-   
-    # Typing date
-    pg.typewrite(formatted_date)
+---
 
-   
-    
-    pg.press("enter")
+## 🚀 Features
 
-    pg.typewrite(b)
-   
-    pg.press("enter")
-   
-    
-    pg.typewrite(c)
-    
-    pg.press("enter")
-    
-    
-    pg.typewrite(str(d))  # Convert c to string before typing
-  
-    pg.press("enter")
-    pg.press("enter")
-    pg.press("enter")
-    pg.press("enter")
-    pg.press("enter")
-    pg.press("enter")
-    pg.press("enter")
+- ✅ Automates data entry for **Contra**, **Payment**, and **Receipt** vouchers in Tally
+- 📊 Reads data directly from a formatted Excel file
+- 🧠 Intelligent error detection using OpenCV template matching
+- 🔁 Automatically creates missing ledgers if Tally throws an error
+- ⏯ Pause/Resume/Exit the script using custom **keyboard shortcuts**
+- 💾 Tracks failed entries for later re-processing
+- ⚙️ Minimal manual intervention once started
 
-    pg.typewrite(e)  # Convert c to string before typing
-    
-      
-    pg.hotkey("ctrl", "a")
-      # Ensure proper indentation for readability and syntax
-    
+---
 
-    # Tally-Entries-Automation
+## 🛠 Tech Stack
+
+- **Python**
+- **pandas** – For reading and processing Excel data
+- **pyautogui** – For simulating keyboard input
+- **OpenCV** – For detecting errors by image comparison
+- **keyboard** – For user control (Pause/Resume/Stop)
+- **Tally ERP** – As the target accounting system
+
+---
+
+## 📂 File Structure
+
